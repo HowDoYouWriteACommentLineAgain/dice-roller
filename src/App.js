@@ -11,8 +11,7 @@ function App() {
     setCurrRolls(newRolls);
     
     const addingPastRolls = [...pastRolls, newRolls];
-    const addSpace = addingPastRolls.join(', ');
-    setPastRolls(addSpace);
+    setPastRolls(addingPastRolls);
     console.clear();
     console.log({currentRolls});
     console.table({pastRolls});
