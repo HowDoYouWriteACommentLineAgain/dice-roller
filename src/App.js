@@ -10,7 +10,7 @@ function App() {
     const newRolls = currentRolls.map(()=>Math.round(Math.random()*6+1));
     setCurrRolls(newRolls);
     
-    const addingPastRolls = [...pastRolls, newRolls];
+    const addingPastRolls = [newRolls,...pastRolls];
     setPastRolls(addingPastRolls);
     console.clear();
     console.log({currentRolls});
@@ -30,7 +30,7 @@ function App() {
         {
           pastRolls.map(
             (currElem, index) => {
-              return <li key={index}>{currElem},</li>
+              return <li key={index}>{currElem.join(', ')}.</li>
             }
           )
         }
